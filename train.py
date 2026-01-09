@@ -23,10 +23,10 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
-# Model: Random Forest Regressor
+# Model: Random Forest Regressor (tuned)
 model = RandomForestRegressor(
-    n_estimators=50,
-    max_depth=10,
+    n_estimators=100,
+    max_depth=15,
     random_state=42
 )
 
@@ -42,7 +42,6 @@ joblib.dump(model, "outputs/model/model.pkl")
 
 # Save metrics
 metrics = {
-    "Name": "RandomForestRegressor",
     "MSE": mse,
     "R2": r2
 }
