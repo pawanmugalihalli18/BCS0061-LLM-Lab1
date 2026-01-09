@@ -12,8 +12,8 @@ from sklearn.metrics import mean_squared_error, r2_score
 os.makedirs("outputs/model", exist_ok=True)
 os.makedirs("outputs/results", exist_ok=True)
 
-# Load dataset
-data = pd.read_csv("dataset/winequality-red.csv")
+# Load dataset (FIXED)
+data = pd.read_csv("dataset/winequality-red.csv", sep=";")
 
 X = data.drop("quality", axis=1)
 y = data["quality"]
@@ -48,6 +48,6 @@ metrics = {
 with open("outputs/results/metrics.json", "w") as f:
     json.dump(metrics, f, indent=4)
 
-# Print metrics (important for logs)
+# Print metrics
 print(f"MSE: {mse}")
 print(f"R2 Score: {r2}")
