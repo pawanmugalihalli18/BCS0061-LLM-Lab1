@@ -30,8 +30,8 @@ jobs:
       - name: Write Job Summary
         run: |
           echo "## Lab 2 – Automated ML Training" >> $GITHUB_STEP_SUMMARY
-          echo "**Name:** Surabhi Sinha" >> $GITHUB_STEP_SUMMARY
-          echo "**Roll Number:** 2022BCS0064" >> $GITHUB_STEP_SUMMARY
+          echo "**Name:** Mugalihalli Pawan" >> $GITHUB_STEP_SUMMARY
+          echo "**Roll Number:** 2022BCS0061" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### Evaluation Metrics" >> $GITHUB_STEP_SUMMARY
           cat outputs/results/metrics.json >> $GITHUB_STEP_SUMMARY
